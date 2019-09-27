@@ -1,6 +1,7 @@
-yum install -y httpd
-systemctl restart httpd
-sed -i 's/^/#/g' /etc/httpd.conf.d/welcome.conf
+## welcome page of site
+yum install -y httpd                                                                   ## start apache commit out welcome page
+systemctl restart httpd                                                                ## restart httpd service
+sed -i 's/^/#/g' /etc/httpd.conf.d/welcome.conf                                        ##create webpage 
 echo "<html><body><H1>Hi There NTI-300</h1></body></html>" > /var/www/html/index.html
 systemctl restart httpd
 
